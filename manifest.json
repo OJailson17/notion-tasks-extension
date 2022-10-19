@@ -1,0 +1,11 @@
+{
+	"manifest_version": 3,
+	"name": "Notion Tasks",
+	"description": "Get Notion tasks",
+	"version": "1.0.0",
+
+	"action": {
+		"default_title": "Notion Tasks",
+		"default_popup": "index.html"
+	}
+}
