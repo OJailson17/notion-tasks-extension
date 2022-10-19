@@ -7,7 +7,7 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"build-extension": "yarn build && cp manifest.json dist/"
+		"deploy": "yarn build && cp manifest.json dist/"
 	},
 	"devDependencies": {
 		"typescript": "^4.6.4",
