@@ -4,8 +4,20 @@
 	"description": "Get Notion tasks",
 	"version": "1.0.0",
 
+	"icons": {
+		"16": "./notion-logo.png",
+		"48": "./notion-logo.png",
+		"128": "./notion-logo.png"
+	},
+
 	"action": {
 		"default_title": "Notion Tasks",
-		"default_popup": "index.html"
+		"default_popup": "index.html",
+
+		"default_icon": {
+			"16": "./notion-logo.png",
+			"24": "./notion-logo.png",
+			"32": "./notion-logo.png"
+		}
 	}
 }
