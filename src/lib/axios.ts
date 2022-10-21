@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// const prodUrl = 'https://notion-tasks-extension-server.vercel.app';
-const devUrl = 'http://localhost:8082';
+const prodUrl = `${import.meta.env.VITE_PROD_URL}`;
+const devUrl = `${import.meta.env.VITE_DEV_URL}`;
 
 export const api = axios.create({
 	baseURL: devUrl,

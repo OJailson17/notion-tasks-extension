@@ -10,6 +10,7 @@
 		"deploy": "yarn build && cp manifest.json dist/"
 	},
 	"devDependencies": {
+		"@types/node": "^18.11.3",
 		"typescript": "^4.6.4",
 		"vite": "^3.1.0"
 	},
