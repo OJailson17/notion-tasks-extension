@@ -40,6 +40,7 @@
 	min-height: 2.5rem;
 	padding: 0.5rem;
 	position: relative;
+	text-align: left;
 
 	overflow: auto;
 
