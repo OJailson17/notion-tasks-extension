@@ -16,3 +16,12 @@ body {
 #app h2 {
 	margin-top: 1rem;
 }
+
+footer {
+	margin: 1rem 0;
+	font-size: 0.875rem;
+}
+
+footer a {
+	color: #4ea8de;
+}
