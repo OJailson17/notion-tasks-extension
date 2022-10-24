@@ -12,9 +12,7 @@ Através da aplicação também é possível mudar o status da aplicação para 
 
 Foi criado um servidor para realizar as chamadas para a API do Notion pois só é possível fazer requisições pelo servidor.
 
-- [Repositório do servidor](https://github.com/OJailson17/notion-tasks-extension-server)
-
-> **OBS**: Por conta de algumas limitações que a API do Notion traz devido as informações necessárias para usá-la, não faz sentido publicar esta extensão na Chrome Store, pois sua utilização seria muito trabalhosa.
+> **OBS**: Por conta de algumas limitações que a API do Notion traz devido as informações necessárias para usá-la, não faz sentido publicar esta extensão na Chrome Store, pois sua utilização seria muito trabalhosa. Por isso, ela é para uso pessoal.
 
 ## Tecnologias
 
@@ -23,8 +21,6 @@ Foi criado um servidor para realizar as chamadas para a API do Notion pois só �
 - Typescript
 
 ---
-
-> Para utilizá-la de forma local primeiro é necessário fazer o deploy do servidor ou rodá-lo de forma local, pois o API do Notion não aceita requisições pelo lado do cliente. O código do servidor está [nesse repositório](https://github.com/OJailson17/notion-tasks-extension-server).
 
 ### Install
 
@@ -39,6 +35,8 @@ npm run dev
 ```
 
 ### Deploy
+
+> **OBS:** A aplicação não funciona sem o servidor está rodando. Por segurança, o código do servidor ainda não está público.
 
 Depois de conferir se aplicação tá funcionando corretamente, basta rodar o comando de deploy.
 
