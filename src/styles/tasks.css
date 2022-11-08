@@ -46,6 +46,7 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 	gap: 0.5rem;
 
 	background-color: #262626;
@@ -59,8 +60,30 @@
 	margin-top: 1rem;
 }
 
+.tasks-container .task span {
+	width: 90%;
+}
+
+.tasks-container .task .status {
+	padding: 3px;
+	border-radius: 50%;
+	position: relative;
+}
+
 .tasks-container .empty-list {
 	font-size: 0.875rem;
 	font-weight: 400;
 	color: darkgray;
+}
+
+.overdue {
+	background-color: red;
+}
+
+.todo {
+	background-color: gray;
+}
+
+.in-progress {
+	background-color: blue;
 }

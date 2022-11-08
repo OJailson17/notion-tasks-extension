@@ -3,18 +3,8 @@ import { checkTask } from './checkTask';
 
 interface ResponseProps {
 	id: string;
-	properties: {
-		Name: {
-			title: {
-				plain_text: string;
-			}[];
-		};
-		Status: {
-			status: {
-				name: string;
-			};
-		};
-	};
+	title: string;
+	status: string | null;
 }
 
 // The container the will render the whole task list
@@ -30,7 +20,7 @@ const generateTasksList = (listItems: ResponseProps[]) => {
 		const taskDiv = document.createElement('div');
 		taskDiv.setAttribute('class', 'task');
 
-		const isInputChecked = item.properties?.Status?.status?.name === 'Done';
+		const isInputChecked = item.status === 'Done';
 
 		// Create a checkbox input and set atributes to it
 		const checkboxInput = document.createElement('input');
@@ -58,11 +48,35 @@ const generateTasksList = (listItems: ResponseProps[]) => {
 
 		// Create a span element to add the task text value
 		const span = document.createElement('span');
-		span.innerText = item.properties.Name.title[0].plain_text;
+		span.innerText = item.title;
 
-		// Append the input and the span in the task div container
+		// Create a div to show task status
+		const statusElement = document.createElement('div');
+		statusElement.setAttribute('class', 'status');
+
+		// Change status div class depending on the status
+		switch (item.status) {
+			case 'Not Started':
+				statusElement.classList.remove('in-progress', 'overdue', 'todo');
+				statusElement.classList.add('todo');
+				break;
+			case 'In progress':
+				statusElement.classList.remove('in-progress', 'overdue', 'todo');
+				statusElement.classList.add('in-progress');
+				break;
+			case 'Overdue':
+				statusElement.classList.remove('in-progress', 'overdue', 'todo');
+				statusElement.classList.add('overdue');
+				break;
+			default:
+				statusElement.classList.remove('in-progress', 'overdue', 'todo');
+				statusElement.classList.add('todo');
+		}
+
+		// Append the input, span and div element in the task div container
 		taskDiv.appendChild(checkboxInput);
 		taskDiv.appendChild(span);
+		taskDiv.appendChild(statusElement);
 
 		// Append the task container on the
 		taskListContainer?.appendChild(taskDiv);
