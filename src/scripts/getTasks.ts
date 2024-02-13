@@ -93,7 +93,7 @@ const generateEmptyComponent = () => {
 // Get the tasks data from api
 export const getTasksData = async () => {
 	try {
-		const response = await api.get('/');
+		const response = await api.get('/projects');
 		const tasks = (await response.data) as ResponseProps[];
 
 		console.log(tasks);

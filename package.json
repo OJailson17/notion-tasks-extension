@@ -5,6 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
+		"postbuild": "cp ./manifest.json ./dist",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"deploy": "yarn build && cp manifest.json dist/"

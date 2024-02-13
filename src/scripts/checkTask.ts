@@ -28,9 +28,12 @@ export const checkTask = async (
 	const { id } = event.dataset;
 
 	try {
-		const response: APIResponse = await api.post(`/status/update/${id}`, {
-			isChecked: event.checked,
-		});
+		const response: APIResponse = await api.post(
+			`/projects/status/update/${id}`,
+			{
+				isChecked: event.checked,
+			},
+		);
 
 		console.log(response);
 		return response;
